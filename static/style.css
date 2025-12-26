@@ -1,82 +1,140 @@
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f8;
-  color: #1f2933;
-  margin: 0;
-  padding: 40px;
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
 }
 
-h2, h3 {
-  color: #0f4c81;
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  color: #0f172a;
+}
+
+/* ===== App Layout ===== */
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* ===== Header ===== */
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 16px;
+  color: #475569;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.04),
+    0 8px 24px rgba(15,23,42,0.06);
+}
+
+/* ===== Typography ===== */
+.card h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===== Form ===== */
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 8px;
 }
 
 textarea {
   width: 100%;
-  max-width: 900px;
-  height: 150px;
-  padding: 12px;
+  min-height: 160px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
   font-size: 15px;
-  border-radius: 8px;
-  border: 1px solid #cfd8e3;
-  background: #ffffff;
+  resize: vertical;
+  outline: none;
 }
 
+textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+/* ===== Button ===== */
 button {
-  margin-top: 12px;
-  padding: 10px 18px;
-  background: #0f4c81;
-  color: #ffffff;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 10px;
   font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-  background: #09385f;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(79,70,229,0.35);
 }
 
-section {
-  background: #ffffff;
-  padding: 20px;
-  margin-top: 30px;
-  border-radius: 10px;
-  max-width: 900px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
+/* ===== Output Styling (JS compatible) ===== */
 .bullet {
-  margin-bottom: 16px;
-  padding: 12px;
-  border-left: 5px solid #0f4c81;
-  background: #f9fbfd;
-  border-radius: 6px;
-}
-
-.bad {
-  border-left-color: #c0392b;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border-left: 4px solid #6366f1;
+  margin-bottom: 14px;
 }
 
 .good {
-  border-left-color: #27ae60;
+  border-left-color: #22c55e;
+}
+
+.bad {
+  border-left-color: #ef4444;
 }
 
 .suggestion {
-  color: #c0392b;
   font-size: 14px;
-}
-
-input {
-  margin-top: 8px;
-  padding: 8px;
-  width: 100%;
-  max-width: 600px;
-  border-radius: 6px;
-  border: 1px solid #cfd8e3;
-}
-
-.result {
+  color: #475569;
   margin-top: 6px;
+}
+
+.question {
+  margin-top: 14px;
+}
+
+.answer-box {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.evaluation {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #eef2ff;
+  border-radius: 8px;
   font-size: 14px;
-  color: #34495e;
 }

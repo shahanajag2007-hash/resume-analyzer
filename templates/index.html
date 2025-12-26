@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Resume Analyzer</title>
-  <link rel="stylesheet" href="/static/style.css">
-
+  <link rel="stylesheet" href="/static/style.css" />
 </head>
 
 <body>
-<section class="container">
+  <div class="app">
 
+    <!-- Header -->
+    <header class="header">
+      <h1>Resume Analyzer</h1>
+      <p>Turn your experience into clear, provable, interview-ready bullets.</p>
+    </header>
 
-  <h1>Resume Analyzer</h1>
+    <!-- Input Card -->
+    <section class="card">
+      <label for="resumeText" class="label">Paste your resume</label>
+      <textarea
+        id="resumeText"
+        placeholder="Paste your full resume or experience here..."
+      ></textarea>
+      <button onclick="analyzeResume()">Analyze Resume</button>
+    </section>
 
-  <textarea id="resumeText"
-    placeholder="Paste your full resume or experience here..."></textarea>
+    <!-- Results -->
+    <section class="card">
+      <h2>Structured Resume Bullets</h2>
+      <div id="bullets"></div>
+    </section>
 
-  <button onclick="analyzeResume()">Analyze Resume</button>
+    <section class="card">
+      <h2>Provability & Suggestions</h2>
+      <div id="provability"></div>
+    </section>
 
-  <h2>Structured Resume Bullets</h2>
-  <div id="bullets"></div>
+    <section class="card">
+      <h2>Interview Questions</h2>
+      <div id="questions"></div>
+    </section>
 
-  <h2>Provability & Suggestions</h2>
-  <div id="provability"></div>
+  </div>
 
-  <h2>Interview Questions</h2>
-  <div id="questions"></div>
-
-</div>
-
-<script src="/static/script.js"></script>
+  <script src="/static/script.js"></script>
 </body>
 </html>
