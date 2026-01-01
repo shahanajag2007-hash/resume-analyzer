@@ -172,3 +172,59 @@ footer {
   line-height: 1.6;
   opacity: 0.9;
 }
+/* FEATURE GRID */
+
+.features-section {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.04)
+  );
+  padding: 28px;
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+/* STEPS */
+
+.steps-section {
+  margin: 90px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.step {
+  flex: 1;
+  padding: 18px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  font-size: 15px;
+}
+.question {
+  margin-bottom: 24px;
+}
