@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Resume Analyzer</title>
-  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
-  <div class="app">
-
-    <!-- Header -->
-    <header class="header">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
       <h1>Resume Analyzer</h1>
-      <p>Turn your experience into clear, provable, interview-ready bullets.</p>
-    </header>
+      <p class="subtitle">
+        AI-powered resume analysis to help you stand out, get shortlisted, and ace interviews.
+      </p>
 
-    <!-- Input Card -->
-    <section class="card">
-      <label for="resumeText" class="label">Paste your resume</label>
-      <textarea
-        id="resumeText"
-        placeholder="Paste your full resume or experience here..."
-      ></textarea>
-      <button onclick="analyzeResume()">Analyze Resume</button>
-    </section>
+      <div class="resume-card">
+        <textarea id="resumeText" placeholder="Paste your resume here..."></textarea>
+        <button onclick="analyzeResume()">Analyze Resume</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Results -->
-    <section class="card">
-      <h2>Structured Resume Bullets</h2>
-      <div id="bullets"></div>
-    </section>
+  <!-- RESULTS -->
+  <section class="section">
+    <h2>📌 Structured Resume Bullets</h2>
+    <div id="bullets"></div>
+  </section>
 
-    <section class="card">
-      <h2>Provability & Suggestions</h2>
-      <div id="provability"></div>
-    </section>
+  <section class="section">
+    <h2>✅ Provability & Suggestions</h2>
+    <div id="provability"></div>
+  </section>
 
-    <section class="card">
-      <h2>Interview Questions</h2>
-      <div id="questions"></div>
-    </section>
+  <section class="section">
+    <h2>🎤 Interview Questions</h2>
+    <div id="questions"></div>
+  </section>
 
-  </div>
+  <!-- TRUST SECTION -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>ATS Friendly</h3>
+      <p>Optimized bullet points recruiters actually trust.</p>
+    </div>
+    <div class="feature-card">
+      <h3>AI-Backed</h3>
+      <p>Powered by modern language models.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Privacy First</h3>
+      <p>Your resume is never stored permanently.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Resume Analyzer · Built with AI</p>
+  </footer>
 
   <script src="/static/script.js"></script>
 </body>
